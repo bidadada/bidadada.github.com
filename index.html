@@ -210,14 +210,6 @@
 <blockquote>
 <p>端口操作</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">查看已开放端口：firewall-cmd --list-ports</span><br><span class="line">开启端口：firewall-cmd --zone=public --add-port=2222/tcp --permanent</span><br><span class="line">关闭端口：firewall-cmd --zone=public --remove-port=2222/tcp --permanent</span><br><span class="line">查询某端口是否开启：firewall-cmd --query-port=80/tcp</span><br></pre></td></tr></table></figure>
-
-<h2 id="文件解压缩"><a href="#文件解压缩" class="headerlink" title="文件解压缩"></a>文件解压缩</h2><blockquote>
-<p>只列举三种</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">01-.tar格式</span><br><span class="line">解包：[＊＊＊]$ tar xvf FileName.tar</span><br><span class="line">打包：[＊＊＊]$ tar cvf FileName.tar DirName（注：tar是打包，不是压缩！）</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">02-.gz格式</span><br><span class="line">解压1：[＊＊＊]$ gunzip FileName.gz</span><br><span class="line">解压2：[＊＊＊]$ gzip -d FileName.gz</span><br><span class="line">压 缩：[＊＊＊]$ gzip FileName</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/06/08/centos7%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more" rel="contents">
