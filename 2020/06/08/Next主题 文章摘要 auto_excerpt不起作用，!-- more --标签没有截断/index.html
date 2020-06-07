@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="由于使用了新版本的next主题，网上搜索大部分都是配置auto_excerpt的，配置之后不起作用。  123本文针对版本：hexo: 4.2.1next: 7.8.0 #next版本查看：themes-&gt;next-&gt;package.json  在hexo站点中执行 1npm install hexo-excerpt --save  打开hexo站点配置文件夹的_config.yml">
+  <meta name="description" content="由于使用了新版本的next主题，网上搜索大部分都是配置auto_excerpt的，配置之后不起作用。  123本文针对版本：hexo: 4.2.1next: 7.8.0 #next版本查看：themes-&gt;next-&gt;package.json  在hexo站点中执行 1npm install hexo-excerpt --save">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Next主题 文章摘要 auto_excerpt不起作用">
 <meta property="og:url" content="http://yoursite.com/2020/06/08/Next%E4%B8%BB%E9%A2%98%20%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81%20auto_excerpt%E4%B8%8D%E8%B5%B7%E4%BD%9C%E7%94%A8%EF%BC%8C!--%20more%20--%E6%A0%87%E7%AD%BE%E6%B2%A1%E6%9C%89%E6%88%AA%E6%96%AD/index.html">
 <meta property="og:site_name" content="碧...dadada">
-<meta property="og:description" content="由于使用了新版本的next主题，网上搜索大部分都是配置auto_excerpt的，配置之后不起作用。  123本文针对版本：hexo: 4.2.1next: 7.8.0 #next版本查看：themes-&gt;next-&gt;package.json  在hexo站点中执行 1npm install hexo-excerpt --save  打开hexo站点配置文件夹的_config.yml">
+<meta property="og:description" content="由于使用了新版本的next主题，网上搜索大部分都是配置auto_excerpt的，配置之后不起作用。  123本文针对版本：hexo: 4.2.1next: 7.8.0 #next版本查看：themes-&gt;next-&gt;package.json  在hexo站点中执行 1npm install hexo-excerpt --save">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-07T17:07:06.000Z">
-<meta property="article:modified_time" content="2020-06-07T17:23:40.249Z">
+<meta property="article:modified_time" content="2020-06-07T17:36:03.377Z">
 <meta property="article:author" content="碧dada">
 <meta name="twitter:card" content="summary">
 
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-06-08 01:07:06 / 修改时间：01:23:40" itemprop="dateCreated datePublished" datetime="2020-06-08T01:07:06+08:00">2020-06-08</time>
+              <time title="创建时间：2020-06-08 01:07:06 / 修改时间：01:36:03" itemprop="dateCreated datePublished" datetime="2020-06-08T01:07:06+08:00">2020-06-08</time>
             </span>
 
           
@@ -212,10 +212,12 @@
 <p>在hexo站点中执行</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-excerpt <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
+
 <p>打开hexo站点配置文件夹的_config.yml，加入如下代码：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">excerpt:</span></span><br><span class="line">  <span class="attr">depth:</span> <span class="number">5</span>  <span class="comment">#按层来算，也就是按内容块来算</span></span><br><span class="line">  <span class="attr">excerpt_excludes:</span> <span class="string">[]</span></span><br><span class="line">  <span class="attr">more_excludes:</span> <span class="string">[]</span></span><br><span class="line">  <span class="attr">hideWholePostExcerpts:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<p>如果嫌麻烦，也可以直接在文章中加入<a id="more"></a>标签，这也是推荐的一种方式。截断文章的行为由 Hexo 和/或 Hexo 插件控制，与主题无关。</p>
+<p>如果嫌麻烦，也可以直接在文章中加入<!-- more -->标签，这也是推荐的一种方式。截断文章的行为由 Hexo 和/或 Hexo 插件控制，与主题无关。</p>
 <p>参考：<a href="https://github.com/theme-next/hexo-theme-next/issues/1404" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next/issues/1404</a></p>
 
     </div>
@@ -246,7 +248,7 @@
       </div>
       
       <div style="display: inline-block;">
-        <img src="/images/wechatpay.jpg" alt="碧dada 支付宝">
+        <img src="/images/alipay.jpg" alt="碧dada 支付宝">
         <p>支付宝</p>
       </div>
 
